@@ -1,0 +1,39 @@
+package com.glasiem.triangles;
+
+public class Triangle {
+    protected double a,b,c;
+
+    public Triangle(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public void setB(double b) {
+        this.b = b;
+    }
+
+    public void setC(double c) {
+        this.c = c;
+    }
+
+    public double calculatePerimeter(){
+        return a + b + c;
+    }
+
+    public double calculateAngleA(){
+        return (b*b + c*c - a*a) / (2*b*c);
+    }
+
+    public double calculateAngleB(){
+        return (a*a + c*c - b*b) / (2*a*c);
+    }
+
+    public double calculateAngleC(){
+        return (b*b + a*a - c*c) / (2*b*a);
+    }
+}
